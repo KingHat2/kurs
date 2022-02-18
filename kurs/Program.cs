@@ -24,7 +24,9 @@ namespace kurs
     {
         //Статичное поле, которое хранит значение статуса авторизации
         public static bool auth = false;
-        //Статичное поле, которое хранит значения ID пользователя
+        //Статичное поле, которое хранит значения pass пользователя
+        public static string auth_pass = null;
+        //Статичное поле, которое хранит значения id пользователя
         public static string auth_id = null;
         //Статичное поле, которое хранит значения ФИО пользователя
         public static string auth_login = null;

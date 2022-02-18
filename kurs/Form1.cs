@@ -41,8 +41,8 @@ namespace kurs
         private void Form1_Load(object sender, EventArgs e)
         {
             this.Hide();
-            Form2 = new Form2();
-            Form2.ShowDialog();
+            Form2  form2=  new Form2();
+            form2.ShowDialog();
             if (Auth.auth)
             {
                 //Отображаем рабочую форму
@@ -55,6 +55,7 @@ namespace kurs
             {
                 this.Close();
             }
+
         }
         private void metroButton1_Click(object sender, EventArgs e)
         {
