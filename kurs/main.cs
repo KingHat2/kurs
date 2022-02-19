@@ -11,9 +11,9 @@ using MySql.Data.MySqlClient;
 
 namespace kurs
 {
-    public partial class Form1 : Form
+    public partial class main : Form
     {
-        public Form1()
+        public main()
         {
             InitializeComponent();
         }
@@ -41,8 +41,8 @@ namespace kurs
         private void Form1_Load(object sender, EventArgs e)
         {
             this.Hide();
-            Form2  form2=  new Form2();
-            form2.ShowDialog();
+            login  login=  new login();
+            login.ShowDialog();
             if (Auth.auth)
             {
                 //Отображаем рабочую форму
@@ -59,12 +59,23 @@ namespace kurs
         }
         private void metroButton1_Click(object sender, EventArgs e)
         {
-
+            
         }
 
         private void metroButton4_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void metroButton3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void metroButton1_Click_1(object sender, EventArgs e)
+        {
+          raspisanie form = new raspisanie ();
+            form.ShowDialog();
         }
     }
 }

@@ -1,7 +1,7 @@
 ﻿
 namespace kurs
 {
-    partial class Form1
+    partial class main
     {
         /// <summary>
         /// Обязательная переменная конструктора.
@@ -32,11 +32,9 @@ namespace kurs
             this.metroButton1 = new MetroFramework.Controls.MetroButton();
             this.metroButton2 = new MetroFramework.Controls.MetroButton();
             this.metroButton3 = new MetroFramework.Controls.MetroButton();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.metroButton4 = new MetroFramework.Controls.MetroButton();
             this.metroLabel1 = new MetroFramework.Controls.MetroLabel();
             this.metroButton5 = new MetroFramework.Controls.MetroButton();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // metroButton1
@@ -47,6 +45,7 @@ namespace kurs
             this.metroButton1.TabIndex = 0;
             this.metroButton1.Text = "Расписание";
             this.metroButton1.UseSelectable = true;
+            this.metroButton1.Click += new System.EventHandler(this.metroButton1_Click_1);
             // 
             // metroButton2
             // 
@@ -65,14 +64,7 @@ namespace kurs
             this.metroButton3.TabIndex = 2;
             this.metroButton3.Text = "Изменение Расписания";
             this.metroButton3.UseSelectable = true;
-            // 
-            // dataGridView1
-            // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(152, 2);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(646, 365);
-            this.dataGridView1.TabIndex = 3;
+            this.metroButton3.Click += new System.EventHandler(this.metroButton3_Click);
             // 
             // metroButton4
             // 
@@ -95,14 +87,14 @@ namespace kurs
             // 
             // metroButton5
             // 
-            this.metroButton5.Location = new System.Drawing.Point(2, 396);
+            this.metroButton5.Location = new System.Drawing.Point(13, 381);
             this.metroButton5.Name = "metroButton5";
-            this.metroButton5.Size = new System.Drawing.Size(116, 23);
+            this.metroButton5.Size = new System.Drawing.Size(75, 23);
             this.metroButton5.TabIndex = 6;
-            this.metroButton5.Text = "Создание Аккаунта";
+            this.metroButton5.Text = "Регистрация";
             this.metroButton5.UseSelectable = true;
             // 
-            // Form1
+            // main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -110,14 +102,12 @@ namespace kurs
             this.Controls.Add(this.metroButton5);
             this.Controls.Add(this.metroLabel1);
             this.Controls.Add(this.metroButton4);
-            this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.metroButton3);
             this.Controls.Add(this.metroButton2);
             this.Controls.Add(this.metroButton1);
-            this.Name = "Form1";
+            this.Name = "main";
             this.Text = "Расписание";
             this.Load += new System.EventHandler(this.Form1_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -128,7 +118,6 @@ namespace kurs
         private MetroFramework.Controls.MetroButton metroButton1;
         private MetroFramework.Controls.MetroButton metroButton2;
         private MetroFramework.Controls.MetroButton metroButton3;
-        private System.Windows.Forms.DataGridView dataGridView1;
         private MetroFramework.Controls.MetroButton metroButton4;
         private MetroFramework.Controls.MetroLabel metroLabel1;
         private MetroFramework.Controls.MetroButton metroButton5;

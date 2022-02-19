@@ -1,7 +1,7 @@
 ﻿
 namespace kurs
 {
-    partial class Form2
+    partial class login
     {
         /// <summary>
         /// Required designer variable.
@@ -41,16 +41,17 @@ namespace kurs
             // 
             // metroButton1
             // 
-            this.metroButton1.Location = new System.Drawing.Point(34, 321);
+            this.metroButton1.Location = new System.Drawing.Point(12, 294);
             this.metroButton1.Name = "metroButton1";
             this.metroButton1.Size = new System.Drawing.Size(75, 23);
             this.metroButton1.TabIndex = 0;
             this.metroButton1.Text = "Вход";
             this.metroButton1.UseSelectable = true;
+            this.metroButton1.Click += new System.EventHandler(this.metroButton1_Click);
             // 
             // metroButton2
             // 
-            this.metroButton2.Location = new System.Drawing.Point(392, 321);
+            this.metroButton2.Location = new System.Drawing.Point(162, 294);
             this.metroButton2.Name = "metroButton2";
             this.metroButton2.Size = new System.Drawing.Size(75, 23);
             this.metroButton2.TabIndex = 1;
@@ -70,7 +71,7 @@ namespace kurs
             // metroLabel2
             // 
             this.metroLabel2.AutoSize = true;
-            this.metroLabel2.Location = new System.Drawing.Point(392, 104);
+            this.metroLabel2.Location = new System.Drawing.Point(162, 104);
             this.metroLabel2.Name = "metroLabel2";
             this.metroLabel2.Size = new System.Drawing.Size(54, 19);
             this.metroLabel2.TabIndex = 5;
@@ -91,7 +92,7 @@ namespace kurs
             this.metroTextBox1.CustomButton.UseSelectable = true;
             this.metroTextBox1.CustomButton.Visible = false;
             this.metroTextBox1.Lines = new string[0];
-            this.metroTextBox1.Location = new System.Drawing.Point(44, 208);
+            this.metroTextBox1.Location = new System.Drawing.Point(6, 156);
             this.metroTextBox1.MaxLength = 32767;
             this.metroTextBox1.Name = "metroTextBox1";
             this.metroTextBox1.PasswordChar = '\0';
@@ -121,7 +122,7 @@ namespace kurs
             this.metroTextBox2.CustomButton.UseSelectable = true;
             this.metroTextBox2.CustomButton.Visible = false;
             this.metroTextBox2.Lines = new string[0];
-            this.metroTextBox2.Location = new System.Drawing.Point(392, 207);
+            this.metroTextBox2.Location = new System.Drawing.Point(162, 156);
             this.metroTextBox2.MaxLength = 32767;
             this.metroTextBox2.Name = "metroTextBox2";
             this.metroTextBox2.PasswordChar = '\0';
@@ -151,7 +152,7 @@ namespace kurs
             this.metroTextBox3.CustomButton.UseSelectable = true;
             this.metroTextBox3.CustomButton.Visible = false;
             this.metroTextBox3.Lines = new string[0];
-            this.metroTextBox3.Location = new System.Drawing.Point(247, 377);
+            this.metroTextBox3.Location = new System.Drawing.Point(85, 349);
             this.metroTextBox3.MaxLength = 32767;
             this.metroTextBox3.Name = "metroTextBox3";
             this.metroTextBox3.PasswordChar = '\0';
@@ -168,7 +169,7 @@ namespace kurs
             // 
             // metroButton3
             // 
-            this.metroButton3.Location = new System.Drawing.Point(246, 153);
+            this.metroButton3.Location = new System.Drawing.Point(197, 349);
             this.metroButton3.Name = "metroButton3";
             this.metroButton3.Size = new System.Drawing.Size(75, 23);
             this.metroButton3.TabIndex = 9;
@@ -176,11 +177,11 @@ namespace kurs
             this.metroButton3.UseSelectable = true;
             this.metroButton3.Click += new System.EventHandler(this.metroButton3_Click);
             // 
-            // Form2
+            // login
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(610, 450);
+            this.ClientSize = new System.Drawing.Size(313, 396);
             this.Controls.Add(this.metroButton3);
             this.Controls.Add(this.metroTextBox3);
             this.Controls.Add(this.metroTextBox2);
@@ -189,8 +190,9 @@ namespace kurs
             this.Controls.Add(this.metroLabel1);
             this.Controls.Add(this.metroButton2);
             this.Controls.Add(this.metroButton1);
-            this.Name = "Form2";
+            this.Name = "login";
             this.Text = "Авторизация";
+            this.Load += new System.EventHandler(this.login_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
