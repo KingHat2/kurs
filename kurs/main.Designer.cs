@@ -93,6 +93,7 @@ namespace kurs
             this.metroButton5.TabIndex = 6;
             this.metroButton5.Text = "Регистрация";
             this.metroButton5.UseSelectable = true;
+            this.metroButton5.Click += new System.EventHandler(this.metroButton5_Click);
             // 
             // main
             // 

@@ -11,13 +11,18 @@ using MySql.Data.MySqlClient;
 
 namespace kurs
 {
-    public partial class raspisanie : Form
+
+    public partial class izmemenie : Form
     {
-        public raspisanie()
+        public izmemenie()
         {
             InitializeComponent();
         }
-        
+        private void izmemenie_Load(object sender, EventArgs e)
+        {
+            conn = new MySqlConnection(connStr);
+            GetListUsers();
+        }
         string id_selected_rows = "0";
         public void GetSelectedIDString()
         {
@@ -28,26 +33,17 @@ namespace kurs
             //ID конкретной записи в Базе данных, на основании индекса строки
             id_selected_rows = dataGridView1.Rows[Convert.ToInt32(index_selected_rows)].Cells[1].Value.ToString();
             //Указываем ID выделенной строки в метке
-            
+
         }
         string connStr = "server=caseum.ru;port=33333;user=st_2_19_19;database=st_2_19_19;password=38138013";
-      
-        MySqlConnection conn;       
-        //DataAdapter представляет собой объект Command , получающий данные из источника данных.
-        private MySqlDataAdapter MyDA = new MySqlDataAdapter();
-        //Объявление BindingSource, основная его задача, это обеспечить унифицированный доступ к источнику данных.
-        private BindingSource bSource = new BindingSource();
-        //DataSet - расположенное в оперативной памяти представление данных, обеспечивающее согласованную реляционную программную 
-        //модель независимо от источника данных.DataSet представляет полный набор данных, включая таблицы, содержащие, упорядочивающие 
-        //и ограничивающие данные, а также связи между таблицами.
-        private DataSet ds = new DataSet();
-        //Представляет одну таблицу данных в памяти.
+
+        MySqlConnection conn;    
         private DataTable table = new DataTable();
         public void GetListUsers()
         {
 
             //Запрос для вывода строк в БД
-            string sql =  "SELECT n_poezda AS 'Номер поезда' ,vrema AS 'Время', mesto_otpravki AS 'Место отправления', mesto_naznachena AS 'место назначение' FROM raspisanie";
+            string sql = "SELECT n_poezda AS 'Номер поезда' ,vrema AS 'Время', mesto_otpravki AS 'Место отправления', mesto_naznachena AS 'место назначение' FROM raspisanie";
             try
             {
                 conn.Open();
@@ -60,7 +56,7 @@ namespace kurs
                 dataGridView1.Columns[1].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
                 dataGridView1.Columns[2].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
                 dataGridView1.Columns[3].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
-                
+
 
             }
             catch
@@ -72,21 +68,13 @@ namespace kurs
                 conn.Close();
 
             }
-            
-        
-        
+
+
+
         }
 
-        private void raspisanie_Load(object sender, EventArgs e)
-        {
-            conn = new MySqlConnection(connStr);
-            GetListUsers();
-        }
-
-        private void metroButton2_Click(object sender, EventArgs e)
-        {
-            this.Hide();
-        }
+      
+       
         public void reload_list()
         {
             //Чистим виртуальную таблицу
@@ -94,14 +82,21 @@ namespace kurs
             //Вызываем метод получения записей, который вновь заполнит таблицу
             GetListUsers();
         }
-
         private void metroButton1_Click(object sender, EventArgs e)
         {
             reload_list();
         }
+
+        private void metroButton2_Click(object sender, EventArgs e)
+        {
+          izmemenie form = new izmemenie();
+            this.Hide();
+        }
+
+        private void izmemenie_Load_1(object sender, EventArgs e)
+        {
+            conn = new MySqlConnection(connStr);
+            GetListUsers();
+        }
     }
-
-       
-    
 }
-

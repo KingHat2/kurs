@@ -66,7 +66,7 @@ namespace kurs
 
         private void MetroTextBox2_TextChanged(object sender, EventArgs e)
         {
-            metroTextBox3.Text = sha256(metroTextBox2.Text);
+           
         }
 
         private void metroButton3_Click(object sender, EventArgs e)

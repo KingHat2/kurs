@@ -1,7 +1,7 @@
 ﻿
 namespace kurs
 {
-    partial class raspisanie
+    partial class izmemenie
     {
         /// <summary>
         /// Required designer variable.
@@ -46,9 +46,7 @@ namespace kurs
             // 
             // metroButton1
             // 
-            this.metroButton1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.metroButton1.Location = new System.Drawing.Point(13, 415);
+            this.metroButton1.Location = new System.Drawing.Point(0, 415);
             this.metroButton1.Name = "metroButton1";
             this.metroButton1.Size = new System.Drawing.Size(75, 23);
             this.metroButton1.TabIndex = 1;
@@ -58,9 +56,7 @@ namespace kurs
             // 
             // metroButton2
             // 
-            this.metroButton2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.metroButton2.Location = new System.Drawing.Point(713, 415);
+            this.metroButton2.Location = new System.Drawing.Point(725, 415);
             this.metroButton2.Name = "metroButton2";
             this.metroButton2.Size = new System.Drawing.Size(75, 23);
             this.metroButton2.TabIndex = 2;
@@ -68,7 +64,7 @@ namespace kurs
             this.metroButton2.UseSelectable = true;
             this.metroButton2.Click += new System.EventHandler(this.metroButton2_Click);
             // 
-            // raspisanie
+            // izmemenie
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -76,9 +72,8 @@ namespace kurs
             this.Controls.Add(this.metroButton2);
             this.Controls.Add(this.metroButton1);
             this.Controls.Add(this.dataGridView1);
-            this.Name = "raspisanie";
-            this.Text = "Form1";
-            this.Load += new System.EventHandler(this.raspisanie_Load);
+            this.Name = "izmemenie";
+            this.Load += new System.EventHandler(this.izmemenie_Load_1);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
 
